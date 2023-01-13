@@ -45,7 +45,7 @@ exports.vote =  async (req,res) => {
         })
         console.log(em.split('@')[1])
         if(ispresent || em.split('@')[1]!="cse.jgec.ac.in"){
-            return res.status(200).send(respMessage(false, "Previously Voted"));
+            return res.status(200).send(respMessage(false, "Email Out of permission or Previously Voted"));
         }
         prev.push(ss)
         vv.votes = prev
